@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
+
+    <ul class="menu">
+      <li class="menu"><a href="index.html">Home</a></li>
+      <li class="menu"><a href="sobre.html">Sobre</a></li>
+      <li class="menu"><a class="active" href="to-do.html">Aplicação</a></li>
+    </ul>
+
     <section class="grid1">
       <div class="adicionar">
         <p>
@@ -17,8 +24,8 @@
         
       <div class="fazer">
         <h3>A fazer</h3>
-        <ul id="incomplete-tasks">
-          <li>
+        <ul class="list" id="incomplete-tasks">
+          <li class="item">
               <input type="checkbox">
               <label>lorem ipsum</label>
               <input type="text">
@@ -31,7 +38,7 @@
                 <span>Deletar</span>
               </button>
           </li>
-        </ul>
+        </ul class="list">
       </div>
       
       <div class="fazendo">
@@ -40,8 +47,8 @@
 
       <div class="feito">
         <h3>Feito</h3>
-        <ul id="completed-tasks">
-          <li>
+        <ul class="list" id="completed-tasks">
+          <li class="item">
             <input type="checkbox" checked>
             <label>dolor sit amet</label>
             <input type="text">
@@ -54,7 +61,7 @@
               <span>Deletar</span>
             </button>
           </li>
-        </ul>
+        </ul class="list">
       </div>
     </section>
 

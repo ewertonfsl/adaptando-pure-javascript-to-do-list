@@ -1,22 +1,58 @@
 /* Basic Style */
 body {
-    background: #fff;
-    color: #333;
-    font-family: Lato, sans-serif;
+  background-color: rgb(59, 134, 247);
+  color: rgb(29, 29, 29);
+  font-family: Lato, sans-serif;
+}
+
+div{
+    background-color: white;
+    border: black;
+    border-radius: 5px;
+    border-style: solid;
   }
+
+ul.menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+li.menu {
+    float: left;
+}
+  
+li.menu a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li.menu a:hover:not(.active) {
+    background-color: #111;
+}
+  
+.active {
+    background-color: rgb(49, 202, 143);
+}
+
   .container {
     display: block;
     width: 400px;
     margin: 100px auto 0;
   }
-  ul {
+  .list {
     margin: 0;
     padding: 0;
   }
-  li * {
+  .item * {
     float: left;
   }
-  li, h3 {
+  .item, h3 {
     clear:both;
     list-style:none;
   }
@@ -78,26 +114,26 @@ body {
   }
   
   /* Task list */
-  li {
+  .item {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
   }
-  li > input[type="checkbox"] {
+  .item > input[type="checkbox"] {
     margin: 0 10px;
     position: relative;
     top: 15px;
   }
-  li > label {
+  .item > label {
     font-size: 18px;
     line-height: 40px;
     width: 237px;
     padding: 0 0 0 11px;
   }
-  li >  input[type="text"] {
+  .item >  input[type="text"] {
     width: 226px;
   }
-  li > .delete:hover {
+  .item > .delete:hover {
     color: #CF2323;
   }
   
@@ -108,15 +144,15 @@ body {
   }
   
   /* Edit Task */
-  ul li input[type=text] {
+  .list .item input[type=text] {
     display:none;
   }
   
-  ul li.editMode input[type=text] {
+  .list .item.editMode input[type=text] {
     display:block;
   }
   
-  ul li.editMode label {
+  .list .item.editMode label {
     display:none;
   }
 
