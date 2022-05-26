@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgb(49, 131, 255),aquamarine);
+    background-attachment: fixed;
+    color: rgb(29, 29, 29);
+    font-family: Lato, sans-serif;
+}
+
+.fundo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: white;
+}
+
+h3{
+    text-align: center;
+}
+
+input{
+    align-items: center;
+    display: block;
+    padding: 10px;
+    margin: 15px;
+}

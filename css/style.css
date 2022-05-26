@@ -1,6 +1,12 @@
 /* Basic Style */
+* {
+    box-sizing: border-box;
+  }
+
+
 body {
-  background-color: rgb(59, 134, 247);
+  background-image: linear-gradient(rgb(49, 131, 255),aquamarine);
+  background-attachment: fixed;
   color: rgb(29, 29, 29);
   font-family: Lato, sans-serif;
 }
@@ -14,7 +20,7 @@ div{
 
 ul.menu{
     list-style-type: none;
-    margin: 0;
+    margin-bottom: 15px;
     padding: 0;
     overflow: hidden;
     background-color: #333;
