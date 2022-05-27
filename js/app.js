@@ -33,10 +33,12 @@ let createNewTaskElement = function(taskString) {
 
 	// editButton.innerText = 'Edit';//innerText encodes special characters, HTML does not.
 	// Modifica HTML do botão com a propriedade innerHTML para inclusão de ícones
-	editButton.innerHTML = 'Edit <i class = "fa-solid fa-pen-to-square">';
+	editButton.innerHTML = '<i class="fa-solid fa-file-pen"></i> <span class="tooltiptext">Editar</span>';
 	editButton.className = "edit";
-	deleteButton.innerHTML = 'Delete <i class="fa-solid fa-trash"></i>';
+	editButton.classList.add('tooltip');
+	deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i> <span class="tooltiptext">Deletar</span>';
 	deleteButton.className = "delete";
+	deleteButton.classList.add('tooltip');
 
 	//and appending.
 	listItem.appendChild(checkBox);
@@ -44,6 +46,7 @@ let createNewTaskElement = function(taskString) {
 	listItem.appendChild(editInput);
 	listItem.appendChild(editButton);
 	listItem.appendChild(deleteButton);
+	listItem.classList.add('item');
 	return listItem;
 }
 
