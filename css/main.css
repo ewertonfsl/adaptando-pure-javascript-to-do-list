@@ -32,8 +32,8 @@ li.menu a {
 }
   
 li.menu a:hover:not(.active) {
-  background-color: white;
-  color: #111;
+  background-color: #000;
+  color: white;
 }
 
 .active {
