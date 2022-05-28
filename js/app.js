@@ -45,7 +45,7 @@ let createNewTaskElement = function(taskString) {
 	editTooltip.classList.add('tooltiptext');
 	deleteTooltip.innerText = "Deletar";
 	deleteTooltip.classList.add('tooltiptext');
-	deleteTooltip.style.backgroundColor = "red";
+	deleteTooltip.style.backgroundColor = "rgb(207 35 35)";
 
 	//and appending.
 	editButton.appendChild(editTooltip);
@@ -56,7 +56,7 @@ let createNewTaskElement = function(taskString) {
 	listItem.appendChild(editButton);
 	listItem.appendChild(deleteButton);
 	listItem.classList.add('item');
-	
+
 	return listItem;
 }
 
