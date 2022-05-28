@@ -141,7 +141,7 @@ li.item.item.editMode {
 }
 
 .item >  input[type="text"] {
-  max-width: 210px;
+  max-width: 203px;
   line-height: 40px;
 }
 
