@@ -192,8 +192,8 @@ h3 {
   padding: 5px 0;
   
   /* Position the tooltip */
-  top: -5px;
-  right: 105%;
+  top: -19px;
+  right: 35%;
   position: absolute;
   z-index: 1;
 }
