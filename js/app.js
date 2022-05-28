@@ -7,7 +7,6 @@
 
 
 // Event handling, under interaction is what starts the code execution.
-debugger
 let taskInput = document.getElementById("new-task");//Add a new task.
 let addButton = document.getElementsByTagName("button")[0];//first button
 let incompleteTaskHolder = document.getElementById("incomplete-tasks");//ul of #incomplete-tasks
@@ -23,7 +22,9 @@ let createNewTaskElement = function(taskString) {
 	let label = document.createElement("label");
 	let editInput = document.createElement("input");
 	let editButton = document.createElement("button");
+	let editTooltip = document.createElement("span");
 	let deleteButton = document.createElement("button");
+	let deleteTooltip = document.createElement("span");
 
 	label.innerText = taskString;
 
@@ -31,22 +32,31 @@ let createNewTaskElement = function(taskString) {
 	checkBox.type = "checkbox";
 	editInput.type = "text";
 
-	// editButton.innerText = 'Edit';//innerText encodes special characters, HTML does not.
-	// Modifica HTML do botão com a propriedade innerHTML para inclusão de ícones
-	editButton.innerHTML = '<i class="fa-solid fa-file-pen"></i> <span class="tooltiptext">Editar</span>';
+	// Modifica HTML dos elementos com a propriedades da DOM
+	editInput.classList.add('editInput');
 	editButton.className = "edit";
+	editButton.innerHTML = '<i class="fa-solid fa-file-pen"></i>';
 	editButton.classList.add('tooltip');
-	deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i> <span class="tooltiptext">Deletar</span>';
 	deleteButton.className = "delete";
+	deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
 	deleteButton.classList.add('tooltip');
 
+	editTooltip.innerText = "Editar";
+	editTooltip.classList.add('tooltiptext');
+	deleteTooltip.innerText = "Deletar";
+	deleteTooltip.classList.add('tooltiptext');
+	deleteTooltip.style.backgroundColor = "red";
+
 	//and appending.
+	editButton.appendChild(editTooltip);
+	deleteButton.appendChild(deleteTooltip);
 	listItem.appendChild(checkBox);
 	listItem.appendChild(label);
 	listItem.appendChild(editInput);
 	listItem.appendChild(editButton);
 	listItem.appendChild(deleteButton);
 	listItem.classList.add('item');
+	
 	return listItem;
 }
 
@@ -72,18 +82,23 @@ let editTask = function() {
 	let editInput = listItem.querySelector('input[type = text]');
 	let label = listItem.querySelector("label");
 	let containsClass = listItem.classList.contains("editMode");
+	let editTooltip = listItem.querySelector("span");
 
 	//If class of the parent is .editmode
 	if(containsClass) {
 		//switch to .editmode
 		//label becomes the inputs value.
+		editTooltip.innerText = "Editar";
 		label.innerText = editInput.value;
 	} else {
 		editInput.value = label.innerText;
+		editTooltip.innerText = "Salvar";
 	}
 
 	//toggle .editmode on the parent.
 	listItem.classList.toggle("editMode");
+
+	editInput.focus();
 }
 
 

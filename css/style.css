@@ -1,17 +1,26 @@
 /* Basic Style */
 
+body {
+  margin: 0;
+}
 
-div {
+.main-content {
+  margin: 0 10px;
+  min-width: 300px;
+}
+
+.adicionar,
+.fazer,
+.fazendo,
+.feito  {
   background-color: white;
   border: black;
   border-radius: 5px;
   border-style: solid;
-  }
-
-.container {
-  display: block;
-  width: 400px;
-  margin: 100px auto 0;
+  width: 100%;
+  max-width: 310px;
+  min-width: 300px;
+  margin-bottom: 10px;
 }
 
 .list {
@@ -38,7 +47,7 @@ button {
 }
 
 button:hover {
-  color: #333;
+  color: #111;
 }
 
 button i {
@@ -58,12 +67,11 @@ label[for='new-task'] {
 }
 
 input[type="text"] {
-  margin: 0;
+  margin: 4px;
   font-size: 18px;
   line-height: 18px;
-  height: 18px;
-  padding: 10px;
   border: 1px solid #ddd;
+  padding: 0 0 0 8px;
   background: #fff;
   border-radius: 6px;
   font-family: 'Open Sans';
@@ -82,16 +90,35 @@ label[for='new-task'] {
 }
 
 input#new-task {
+  margin-top: 10px;
   float: left;
-  width: 290px;
+  width: 97%;
 }
 
-p > button:hover {
-  color: #0FC57C;
+.add-form {
+  display: flex;
+  flex-direction: column;
 }
 
+.add-form > button {
+  align-self: end;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 4px;
+  color: white;
+  margin: 4px;
+}
+
+.add-form > button:hover {
+  background-color: white;
+  color: black;
+}
 
 /* Task list */
+li.item.item.editMode {
+  max-height: 81px;
+}
+
 .item {
   overflow: hidden;
   padding: 20px 0;
@@ -110,18 +137,18 @@ p > button:hover {
   font-size: 18px;
   line-height: 40px;
   width: 237px;
-  padding: 0 0 0 11px;
+  padding-left: 11px;
 }
 
 .item >  input[type="text"] {
-  width: 226px;
+  max-width: 210px;
+  line-height: 40px;
 }
 
 .item > .delete:hover {
   color: #CF2323;
 }
-
-
+  
 /* Completed */
 #completed-tasks label {
   text-decoration: line-through;
@@ -150,29 +177,6 @@ h3 {
   padding-left: 10px;
 }
 
-.grid1 {
-  display: grid;
-  grid-auto-rows: min(15rem, 100%);
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  align-items: start;
-  grid-gap: 8px;
-}
-
-.adicionar {
-  grid-column: 1;
-  grid-row: 2/5;
-}
-
-.fazer {
-  grid-column: 2;
-}
-
-.fazendo {
-}
-
-.feito {
-}
-
 .tooltip {
   position: relative;
   display: inline-block;
@@ -180,13 +184,13 @@ h3 {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 100px;
   background-color: black;
   color: #fff;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 5px;
   padding: 5px 0;
-
+  
   /* Position the tooltip */
   top: -5px;
   right: 105%;
@@ -196,4 +200,23 @@ h3 {
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+@media only screen and (min-width: 768px) {
+  .grid1 {
+    display: grid;
+    grid-auto-rows: min(15rem, 100%);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: start;
+    grid-gap: 8px;
+  }
+
+  .adicionar {
+    grid-column: 1;
+    grid-row: 2/5;
+  }
+
+  .fazer {
+    grid-column: 2;
+  }
 }

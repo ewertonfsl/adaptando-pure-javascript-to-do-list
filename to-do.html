@@ -1,10 +1,13 @@
 <html>
   <head>
     <title>To-do App</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
-    <!-- inclui o cdn do fontawesome para uso de ícones -->
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <!-- inclui o cdn do fontawesome para uso de ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
@@ -15,13 +18,13 @@
       <li class="menu"><a href="to-do.html" class="active">Aplicação</a></li>
     </ul>
 
-    <section class="grid1">
+    <section class="main-content grid1">
       <div class="adicionar">
-        <p>
-          <h3>Adicionar tarefa</h3>
+        <h3>Adicionar tarefa</h3>
+        <span class="add-form">
           <input id="new-task" type="text">
           <button>Adicionar</button>
-        </p>
+        </span>
       </div>
         
       <div class="fazer">
@@ -36,16 +39,16 @@
                 <span class="tooltiptext">Editar</span>
               </button>
               <button class="delete tooltip">
-                <span class="tooltiptext">Deletar</span>
+                <span class="tooltiptext"  style="background-color: red">Deletar</span>
                 <i class="fa-solid fa-trash"></i>
               </button>
           </li>
         </ul>
       </div>
       
-      <div class="fazendo">
+      <!-- <div class="fazendo">
         <h3>Fazendo</h3>
-      </div>
+      </div> -->
 
       <div class="feito">
         <h3>Feito</h3>
@@ -59,7 +62,7 @@
               <span class="tooltiptext">Editar</span>
             </button>
             <button class="delete tooltip">
-              <span class="tooltiptext">Deletar</span>
+              <span class="tooltiptext" style="background-color: red">Deletar</span>
               <i class="fa-solid fa-trash"></i>
             </button>
           </li>

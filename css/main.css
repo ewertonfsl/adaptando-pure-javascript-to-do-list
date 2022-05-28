@@ -11,12 +11,13 @@ body {
 }
 
 ul.menu {
+  background-color: #333;
   list-style-type: none;
   margin-top: 0;
   margin-bottom: 15px;
-  padding: 0;
+  min-width: 320px;
   overflow: hidden;
-  background-color: #333;
+  padding: 0;
 }
   
 li.menu {
@@ -24,10 +25,10 @@ li.menu {
 }
   
 li.menu a {
-  display: block;
   color: white;
-  text-align: center;
+  display: block;
   padding: 14px 16px;
+  text-align: center;
   text-decoration: none;
 }
   
