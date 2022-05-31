@@ -129,6 +129,7 @@ li.item.item.editMode {
 
 .item > input[type="checkbox"] {
   margin: 0 10px;
+  cursor: pointer;
   position: relative;
   top: 15px;
 }
